@@ -1,0 +1,50 @@
+{
+  "name": "dev",
+
+  "version": "1.0.0",
+
+  "description": "",
+
+  "main": "index.js",
+
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint -c ./.eslintrc ../common/**/*.js --ignore-path ./.eslintignore",
+    "lint:css": "stylelint --config .stylelintrc sass/**/**.scss",
+    "format:css": "stylelint --fix --config .stylelintrc sass/**/**.scss",
+    "vlint": "vlint && vlint --css",
+    "vlint-rebaseline": "npx vlint --rebaseline",
+    "vlint:css-rebaseline": "npx vlint --css --rebaseline"
+  },
+
+  "author": "",
+  "license": "ISC",
+
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  },
+
+  "browserslist": ["ie >= 11", "iOS >= 11", "android >= 7"],
+
+  "devDependencies": {
+    "@mitsue/eslint-config": "^1.0.2",
+    "@mitsue/vlint": "^0.3.0",
+    "autoprefixer": "^9.7.3",
+    "browser-sync": "^2.26.7",
+    "eslint": "^6.7.2",
+    "gulp-csscomb": "^3.0.6",
+    "gulp-line-ending-corrector": "^1.0.3",
+    "gulp-load-plugins": "^2.0.1",
+    "gulp-postcss": "^8.0.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-prettier": "^1.1.1",
+    "stylelint-scss": "^3.9.0"
+  }
+}
